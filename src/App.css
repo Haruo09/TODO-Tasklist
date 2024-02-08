@@ -92,6 +92,7 @@ body {
 
   background-color: var(--purple);
   border-radius: 10px;
+  margin-top: 15px;
 }
 
 .TodoTask p {
@@ -113,7 +114,12 @@ body {
 }
 
 .TodoTask button svg:hover {
-  box-shadow: 0px 0px 5px 2px  rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.TodoTask button svg:active {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .TodoTask .buttons {
