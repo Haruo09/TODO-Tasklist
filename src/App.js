@@ -1,13 +1,16 @@
+import React, { useState } from 'react';
 import './App.css';
 import { TodoForm } from './components/TodoForm';
-import { TodoTask } from './components/TodoTask';
+import { TodoTasks } from './components/TodoTasks';
 
 function App() {
+
+  const [tasks, setTasks] = useState([]);
   return (
     <div className="App">
       <h1>Get Things Ready!</h1>
-      <TodoForm onInputChange={(e) => console.log(e.target.value)} />
-      <TodoTask value="Teste" />
+      <TodoForm tasks={tasks} setTasks={setTasks} />
+      <TodoTasks tasks={tasks} />
     </div>
   );
 }
