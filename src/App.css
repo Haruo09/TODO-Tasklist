@@ -79,7 +79,7 @@ body {
 }
 
 .TodoForm button:active {
-  background-color: white;
+  background-color: var(--black-purple);
   font-weight: 700;
   color: var(--purple);
 }
