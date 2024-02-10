@@ -1,15 +1,20 @@
 import React from 'react'
 import { TodoTask } from './TodoTask'
 
-export const TodoTasks = ({ tasks }) => {
-
-  console.log(tasks);
+export const TodoTasks = ({ tasks, setTasks }) => {
   
   return (
     <div>
-      {tasks.map((task) => (
-        <TodoTask key={task.id} value={task.taskName} />
-      ))}
+      {tasks.map((task) => {
+        return <TodoTask 
+          key={task.getId()} 
+          id={task.getId()} 
+          value={task.getTaskName()} 
+          tasks={tasks} 
+          setTasks={setTasks} 
+        />
+    })}
     </div>
   )
+
 }
