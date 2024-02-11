@@ -5,15 +5,17 @@ export const TodoTask = ({id, value, tasks, setTasks}) => {
     
     const [taskName, setTaskName] = useState(value);
 
-    const delTask = (id) => {
+    const delTask = () => {
         if (tasks.length === 1) {
             setTasks([]);
         }
-        else {
-            setTasks([...tasks.slice(0, id), ...tasks.slice(id + 1)]);
-        }
 
+        else {
+            setTasks(tasks.filter(task => task.getId() !== id));
+        }
+        
         console.log('elemento deletado!');
+        console.log(tasks);
     }
 
     return (
@@ -23,7 +25,7 @@ export const TodoTask = ({id, value, tasks, setTasks}) => {
                 <button>
                     <AiFillEdit />
                 </button>
-                <button onClick={() => delTask(id)}>
+                <button onClick={delTask}>
                     <AiFillDelete />
                 </button>
             </div>

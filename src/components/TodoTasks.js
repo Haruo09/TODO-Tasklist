@@ -8,7 +8,7 @@ export const TodoTasks = ({ tasks, setTasks }) => {
       {tasks.map((task) => {
         return <TodoTask 
           key={task.getId()} 
-          id={task.getId()} 
+          id={task.getId()}
           value={task.getTaskName()} 
           tasks={tasks} 
           setTasks={setTasks} 

@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <h1>Get Things Ready!</h1>
       <TodoForm tasks={tasks} setTasks={setTasks} />
-      <TodoTasks tasks={tasks} />
+      <TodoTasks tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }

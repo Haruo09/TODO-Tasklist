@@ -20,4 +20,8 @@ export default class Task {
     setIsEditing(bool) {
         this._isEditing = bool;
     }
+
+    setId(id) {
+        this._id = id;
+    }   
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Task from '../classes/Task';
 import { useState } from 'react';
+import { v4 } from 'uuid';
 
 export const TodoForm = ({ value, tasks, setTasks }) => {
 
@@ -9,8 +10,7 @@ export const TodoForm = ({ value, tasks, setTasks }) => {
   function onSubmit(e) {
     e.preventDefault();
     
-    setTasks([...tasks, new Task(tasks.length, inputValue)]);
-    console.log('Todo form: ' + tasks);
+    setTasks([...tasks, new Task(v4(true), inputValue)]);
     setInputValue('');
   }
 
